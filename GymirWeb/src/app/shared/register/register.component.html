@@ -1,0 +1,38 @@
+<div class="full-page-bg">
+    <div class="container h-100">
+      <div class="row justify-content-center align-items-start h-100">
+        <div class="col-md-6">
+          <div class="card mt-5">
+            <div class="card-header text-center">
+              <h2>{{ registerData.title }}</h2>
+            </div>
+            <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" [(ngModel)]="registerData.nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" [(ngModel)]="registerData.email" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" [(ngModel)]="registerData.password" name="password">
+                </div>
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                  <input type="password" class="form-control" id="confirm-password" placeholder="Confirma tu contraseña" [(ngModel)]="registerData.confirmPassword" name="confirmPassword">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+              </form>
+            </div>
+            <div class="card-footer text-center">
+              <small>¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,33 @@
+/* Fondo para toda la página */
+.full-page-bg {
+  background-image: url('/assets/img/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Asegúrate de que el fondo cubre toda la altura de la ventana */
+  display: flex;
+  align-items: flex-start; /* Alinea el contenido al inicio */
+  justify-content: center;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-primary:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

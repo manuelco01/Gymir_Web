@@ -1,0 +1,42 @@
+/* Estilo de los enlaces rápidos en el pie de página */
+footer .quick-links {
+    font-size: 90%; /* Tamaño de fuente */
+    line-height: 40px; /* Altura de línea */
+    margin-bottom: 0; /* Margen inferior */
+    text-transform: none; /* Transformación del texto */
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Familia de fuente */
+  }
+    /* Estilo del texto de copyright */
+  .copyright {
+    color: white; /* Color del texto */
+  }
+    /* Estilo del pie de página */
+footer {
+    padding: 2rem 0; /* Relleno interno */
+    background-color: #212529; /* Color de fondo */
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Estilo de la lista de botones sociales */
+  ul.social-buttons {
+    margin-bottom: 0; /* Margen inferior */
+  }
+  /* Estilo de las columnas del pie de página */
+.footer-column {
+    text-align: center; /* Alineación del texto al centro */
+  }
+    /* Código del pie de página */
+.foot{
+    /* posición: relativa; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a1d20; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    top: 75px; /* Espacio superior */
+  }
+  .nav-link {
+    color:rgb(128, 128, 128);
+  }

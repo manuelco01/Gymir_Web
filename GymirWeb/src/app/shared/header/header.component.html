@@ -1,0 +1,311 @@
+<!-- Navbar -->
+
+<!-- Barra de navegación -->
+<div class="nav-bar sticky-header">
+  <nav class="navbar navbar-expand-lg navbar-light NavBar_color">
+    <div class="container-fluid">
+      <!-- Logo del sitio -->
+      <a class="navbar-brand Logo_Margen" href="#">
+        <img src="assets/img/Logo.png" alt="Nombre del Sitio">
+      </a>
+      <!-- Barra de búsqueda -->
+      <div class="d-flex align-items-center flex-grow-1 justify-content-center"> <!-- Alineación y expansión -->
+        <br>
+        <br>
+        <br>
+        <!-- Formulario de búsqueda -->
+        <form class="d-flex BarraBusqueda center"> <!-- Ajuste del ancho -->
+          <input class="form-control me-2 flex-grow-1" type="search" placeholder="Buscar" aria-label="Buscar"> <!-- Ajuste del tamaño -->
+          <button class="btn Btn_Buscar" type="submit">Buscar</button>
+        </form>
+      </div>
+      <!-- Botón de menú desplegable -->
+      <button class="navbar-toggler btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú de navegación -->
+      <div class="collapse navbar-collapse Margin_Letras" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Elementos de la barra de navegación -->
+          <li class="nav-item">
+            <a class="nav-link Color_Text_Nav" aria-current="page" href="#hero-sec">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Color_Text_Nav" href="#sede">Sedes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Color_Text_Nav" href="#entrenadores">Entrenadores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link Color_Text_Nav" href="/galery">Servicios</a>
+          </li>
+          <!-- Botón de Registrar -->
+          <li class="nav-item">
+            <a class="btn custom-btn" href="/Register">Registrar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Fin de NavBar -->
+
+
+<!--Aqui inicia la imagen principal-->
+<div class="hero-container Estilofondo_Hero" id="hero-sec">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <!-- Columna de la imagen (12 columnas en dispositivos móviles y 6 columnas en pantallas más grandes) -->
+      <div class="col-12 col-md-6 d-flex justify-content-center"> <!-- Agregado para centrar la imagen en dispositivos móviles -->
+        <div class="px-2 py-2">
+          <img [src]="imagenPrincipal" class="img-fluid EstiloImg1" alt="...">
+        </div>
+      </div>
+      <!-- Columna del texto (12 columnas en dispositivos móviles y 6 columnas en pantallas más grandes) -->
+      <div class="col-12 col-md-6">
+        <div class="px-5 py-5 mt-5">
+          <div class="px-2 py-2">
+            <h4 class="ColorCarousel1">{{tituloIntroduccionIP}}</h4> <!-- Título introductorio -->
+            <p class="Clor_Carousel2">Entrena como un guerrero y obtén fuerza, resistencia y mucho músculo.</p> <!-- Texto descriptivo -->
+          </div>
+          <!-- Botón de "Aprende más" -->
+          <div class="px-2 py-2">
+            <button type="button" class="CustomBtn">
+              <span>Aprende más</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Aqui finaliza la imagen principal-->
+
+<!-- Contenedor de las cartas de sedes -->
+<div class="card-container SedesStyles" id="sede">
+  <div class="container-fluid px-4 py-4">
+    <div class="row center mx-4 my-4 text-white">
+      <h1>{{ tituloSedes }}</h1>
+      <h5>En las cuales podrás convertirte en la mejor versión de ti mismo</h5>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Carta 1: Asgard -->
+      <div class="col">
+        <div class="card">
+          <img [src]="imagenSede1" class="card-img-top" alt="gym1">
+          <div class="card-body">
+            <h5 class="card-title">{{ tituloSede1 }}</h5>
+            <p class="card-text">Asgard es la última sede construida, es la más grande y está en el norte de la ciudad.</p>
+            <button class="btn org-btn" (click)="voteForSede1()">Votar</button>
+            <p>{{ getVotesForSede1() }} votos</p>
+          </div>
+        </div>
+      </div>
+      <!-- Carta 2: Midgard -->
+      <div class="col">
+        <div class="card">
+          <img [src]="imagenSede2" class="card-img-top" alt="gym2">
+          <div class="card-body">
+            <h5 class="card-title">{{ tituloSede2 }}</h5>
+            <p class="card-text">Midgard es la segunda sede, presentando algunas mejoras y ubicada al sur de la ciudad.</p>
+            <button class="btn org-btn" (click)="voteForSede2()">Votar</button>
+            <p>{{ getVotesForSede2() }} votos</p>
+          </div>
+        </div>
+      </div>
+      <!-- Carta 3: Yggdrasil -->
+      <div class="col">
+        <div class="card">
+          <img [src]="imagenSede3" class="card-img-top" alt="gym3">
+          <div class="card-body">
+            <h5 class="card-title">{{ tituloSede3 }}</h5>
+            <p class="card-text">Yggdrasil es la sede central, la primera en ser fundada, ubicada en el centro de tu ciudad.</p>
+            <button class="btn org-btn" (click)="voteForSede3()">Votar</button>
+            <p>{{ getVotesForSede3() }} votos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Aqui termina las sedes-->
+
+<!-- Contenedor de Entrenadores -->
+<div class="testimonals-container mt-4 mb-4" id="entrenadores">
+  <div class="container-fluid">
+    <!-- Encabezado -->
+    <div class="testimonals-container mt-4 mb-4" id="entrenadores-cards">
+      <div class="container-fluid">
+        <div class="row center mx-4 my-4">
+          <h2>{{tituloEntrenadores}}</h2>
+          <p>Los expertos al servicio de los mejores</p>
+        </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <!-- Contenido del carrusel -->
+      <div class="carousel-inner">
+         <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <!-- Grupo de cartas -->
+          <div class="card-group">
+      <div class="card">
+        <!-- Carta 1 -->
+        <img [src]="entrenadorCard1" class="card-img-top" alt="entrenador1"><!-- Imagen del entrenador -->
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="propertyBinding">{{ tituloEntrenadorCard1 }}</h5><!-- Nombre del entrenador -->
+          <p class="card-text">Con su energía contagiosa y palabras inspiradoras, Alejandro motiva a sus clientes a superar sus límites y
+            alcanzar sus objetivos fitness..</p> <!-- Descripción del entrenador -->
+        </div>
+        <!-- Fecha de la última actualización -->
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualización 13 días</small>
+        </div>
+      </div>
+      <div class="card">
+        <!-- Carta 2 -->
+        <img [src]="entrenadorCard2" class="card-img-top" alt="entrenador1"><!-- Imagen del entrenador -->
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="propertyBinding">{{tituloEntrenadorCard2}}</h5><!-- Nombre del entrenador -->
+          <p class="card-text">Maestro en esculpir cuerpos, Luis diseña rutinas de entrenamiento enfocadas en la definición muscular y
+            la tonificación, ayudando a sus clientes a lograr la mejor versión de sí mismos.</p><!-- Descripción del entrenador -->
+        </div>
+        <!-- Fecha de la última actualización -->
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualización 13 días</small>
+        </div>
+      </div>
+      <div class="card">
+        <!-- Carta 3 -->
+        <img [src]="entrenadorCard3" class="card-img-top" alt="entrenador1"><!-- Imagen del entrenador -->
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="propertyBinding">{{tituloEntrenadorCard3}}</h5><!-- Nombre del entrenador -->
+          <p class="card-text">Siempre a la vanguardia de las últimas tendencias en fitness, Carlos incorpora nuevas técnicas y equipos
+            para mantener sus clases dinámicas y desafiantes.</p><!-- Descripción del entrenador -->
+        </div>
+        <!-- Fecha de la última actualización -->
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualización 13 días</small>
+        </div>
+      </div>
+    </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+        <!-- Grupo de cartas -->
+          <div class="card-group">
+      <div class="card">
+        <!-- Carta 4 -->
+        <img [src]="entrenadorCard4" class="card-img-top" alt="entrenador1"><!-- Imagen del entrenador -->
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="propertyBinding">{{tituloEntrenadorCard4}}</h5><!-- Nombre del entrenador -->
+          <p class="card-text">Especializada en transformaciones físicas, Valentina trabaja con sus clientes para ayudarles a alcanzar
+             cambios significativos en su composición corporal y su estilo de vida.</p><!-- Descripción del entrenador -->
+        </div>
+        <!-- Fecha de la última actualización -->
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualización 13 días</small>
+        </div>
+      </div>
+      <div class="card">
+         <!-- Carta 5 -->
+        <img [src]="entrenadorCard5" class="card-img-top" alt="entrenador1"><!-- Imagen del entrenador -->
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="propertyBinding">{{tituloEntrenadorCard5}}</h5><!-- Nombre del entrenador -->
+          <p class="card-text">Con su empatía y dedicación, Laura guía a sus clientes en su viaje hacia la salud y el bienestar,
+            proporcionando el apoyo emocional necesario para mantener la constancia en el gimnasio.</p><!-- Descripción del entrenador -->
+        </div>
+        <!-- Fecha de la última actualización -->
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualización 13 días</small>
+        </div>
+      </div>
+      <div class="card">
+        <!-- Carta 5 -->
+        <img [src]="entrenadorCard6" class="card-img-top" alt="entrenador1"><!-- Imagen del entrenador -->
+        <div class="card-body">
+          <h5 class="card-title" [style.color]="propertyBinding">{{tituloEntrenadorCard6}}</h5><!-- Nombre del entrenador -->
+          <p class="card-text">Conocida por su profundo conocimiento en nutrición y entrenamiento, Gabriela personaliza planes
+            de ejercicio y dietas para maximizar los resultados de sus clientes.</p><!-- Descripción del entrenador -->
+        </div>
+        <!-- Fecha de la última actualización -->
+        <div class="card-footer">
+          <small class="text-muted">Ultima actualización 13 días</small>
+        </div>
+      </div>
+    </div>
+        </div>
+      <!-- Controles del carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+    </div>
+<!--Aqui termina los entrenadores-->
+
+<!-- Contenedor del banner de servicios -->
+<div class="banner-container mt-5 mb-5" id="servicios">
+  <div class="container-fluid px-4 py-4">
+    <!-- Tarjeta principal del banner -->
+    <div class="card bg-black text-white shadow-lg">
+      <h2 class="card-header">{{tituloServicios}}</h2> <!-- Encabezado -->
+      <div class="card-body">
+        <div class="container">
+          <!-- Filas con columnas responsivas para mostrar los servicios -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3"> <!-- Utilizamos 3 columnas en pantallas grandes -->
+            <!-- Columna 1 -->
+            <div class="col">
+              <!-- Tarjeta del servicio de Nutrición -->
+              <div class="card text-black move-up mb-3">
+                <div class="card-header">Alimentate bien con nuestro servicio de</div> <!-- Encabezado de la tarjeta -->
+                <div class="card-body">
+                  <h5 class="card-title">Nutrición</h5> <!-- Título del servicio -->
+                  <p class="card-text">En GYMIR, tenemos expertos que te ayudarán a crear un plan personalizado de alimentación para que puedas cumplir tus objetivos.</p> <!-- Descripción del servicio -->
+                </div>
+              </div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="col">
+              <!-- Tarjeta del servicio de Coaching -->
+              <div class="card text-black move-up mb-3">
+                <div class="card-header">Sé tu mejor versión con nuestro</div> <!-- Encabezado de la tarjeta -->
+                <div class="card-body">
+                  <h5 class="card-title">Coaching</h5> <!-- Título del servicio -->
+                  <p class="card-text">Poseemos excelentes y talentosos entrenadores que te potenciarán para que tus rendimientos crezcan significativamente.</p> <!-- Descripción del servicio -->
+                </div>
+              </div>
+            </div>
+            <!-- Columna 3 -->
+            <div class="col">
+              <!-- Tarjeta del servicio de Fisioterapia -->
+              <div class="card text-black move-up mb-3">
+                <div class="card-header">Recuperate gracias a nuestro servicio de</div> <!-- Encabezado de la tarjeta -->
+                <div class="card-body">
+                  <h5 class="card-title">Fisioterapia</h5> <!-- Título del servicio -->
+                  <p class="card-text">El talento de fisioterapeutas profesionales te ayudará con la prevención, tratamiento y rehabilitación de lesiones.</p> <!-- Descripción del servicio -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+<!--Aqui termina los banners de servicios-->
+
+
